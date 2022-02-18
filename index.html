@@ -32,7 +32,13 @@
         const randomItem = arr => arr.splice((Math.random() * arr.length) | 0, 1);
 
         function runRandomItem() {
-            document.getElementById('ChosenDate').innerHTML = randomItem(arr);
+            console.log(arr);
+            if(arr.length > 1){
+                document.getElementById('ChosenDate').innerHTML = randomItem(arr);
+            }
+            else{
+                document.getElementById('ChosenDate').innerHTML = 'Game Complete';
+            }
         };
     </script>
 </body>
