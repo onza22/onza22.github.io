@@ -7,7 +7,24 @@
 </head>
 <body>
 <h1>Game Generator 5000</h1>
-<button class="btn btn-primary btn-lg">Choose a game</button>
+<button class="btn btn-primary btn-lg" onclick="completeSentence(gameArray, 'randomGame')">Choose a game</button>
 <h2>Game to play: <span id="randomGame" class="label label-success">...</span></h2>
+    
+    <script>
+    var gameArray = ["Corners", "Dodgeball", "Pip, Squeak, Ethelred", "Cricket", "Skittles", "Mowgli's war"];
+
+function randomIndex(arr) {
+  return Math.floor((Math.random() * arr.length));
+}
+
+function completeSentence(arr, location) {
+  index = randomIndex(arr);
+  document.getElementById(location).innerHTML = arr[index];
+}
+
+
+
+    </script>    
+    
 </body>
 </html>
